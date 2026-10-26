@@ -12,7 +12,7 @@ interface Props {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, description, canonical, ogImage = '/images/og-default.png', noindex, jsonLd } = Astro.props;
+const { title, description, canonical, ogImage, noindex, jsonLd } = Astro.props;
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? 'https://bouldercircuscenter.net';
 const pageUrl = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`) : Astro.url.toString();
 const fullTitle = title === 'Boulder Circus Center' ? title : `${title} · Boulder Circus Center`;
@@ -35,13 +35,13 @@ const fullTitle = title === 'Boulder Circus Center' ? title : `${title} · Bould
     <meta property="og:description" content={description} />
     <meta property="og:url" content={pageUrl} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    {ogImage && <meta property="og:image" content={`${siteUrl}${ogImage}`} />}
     <meta property="og:site_name" content="Boulder Circus Center" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+    {ogImage && <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />}
 
     {jsonLd && <JsonLd data={jsonLd} />}
   </head>
