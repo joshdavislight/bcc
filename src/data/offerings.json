@@ -1,0 +1,68 @@
+[
+  {
+    "id": "youth-mixed-circus",
+    "name": "Mixed Circus Sessions",
+    "audience": "youth",
+    "ages": "Ages 6–17",
+    "description": "A well-rounded introduction to circus arts including juggling, acrobatics, clowning, German wheel, and more. Each age group progresses to new challenges while building teamwork, confidence, and creativity.",
+    "schedule": "Sessions run seasonally. Check the current session for days and times.",
+    "price": "Varies by session",
+    "portalUrl": "https://portal.iclasspro.com/bouldercircuscenter/classes",
+    "active": true
+  },
+  {
+    "id": "youth-aerial",
+    "name": "Aerial Arts Classes",
+    "audience": "youth",
+    "ages": "Ages 8–17",
+    "description": "From introductory to advanced levels, students build strength, flexibility, and confidence while mastering aerial skills in a fun and supportive environment.",
+    "schedule": "Sessions run seasonally. Check the current session for days and times.",
+    "price": "Varies by session",
+    "portalUrl": "https://portal.iclasspro.com/bouldercircuscenter/classes",
+    "active": true
+  },
+  {
+    "id": "youth-teen-cirque",
+    "name": "Teen Cirque Theater Lab",
+    "audience": "youth",
+    "ages": "Ages 10–17",
+    "description": "A creative circus-theater program running twice a year. Students build original circus-theater acts, play improv and theater games, and share their work in an in-class variety showcase.",
+    "schedule": "Wednesdays, 4:00 PM – 5:45 PM",
+    "price": "Varies by session",
+    "portalUrl": "https://portal.iclasspro.com/bouldercircuscenter/classes",
+    "active": true
+  },
+  {
+    "id": "adult-aerial-fabric",
+    "name": "Aerial Fabric",
+    "audience": "adult",
+    "ages": "Ages 16+",
+    "description": "Build strength, grace, and confidence on aerial fabric. Classes welcome beginners through advanced students in a supportive training environment.",
+    "schedule": "See the FitDegree schedule for current sessions.",
+    "price": "Drop-in and series options available",
+    "portalUrl": "https://app.fitdegree.com/t/dashboard?co=305&f=325",
+    "active": true
+  },
+  {
+    "id": "adult-juggling-club",
+    "name": "Juggling Club",
+    "audience": "adult",
+    "ages": "Ages 16+",
+    "description": "Open juggling practice and skill sharing. All props and skill levels welcome.",
+    "schedule": "See the FitDegree schedule for current sessions.",
+    "price": "Free or donation-based",
+    "portalUrl": "https://app.fitdegree.com/t/dashboard?co=305&f=325",
+    "active": true
+  },
+  {
+    "id": "adult-open-gym",
+    "name": "Open Gym",
+    "audience": "adult",
+    "ages": "Ages 16+",
+    "description": "Supervised open training time for aerialists, acrobats, and circus artists looking for space to practice.",
+    "schedule": "See the FitDegree schedule for current sessions.",
+    "price": "Drop-in",
+    "portalUrl": "https://app.fitdegree.com/t/dashboard?co=305&f=325",
+    "active": true
+  }
+]

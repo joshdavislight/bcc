@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+import offerings from '../data/offerings.json';
+
+const adultOfferings = offerings.filter((o) => o.audience === 'adult' && o.active);
+
+const itemList = {
+  '@type': 'ItemList',
+  itemListElement: adultOfferings.map((o, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Course',
+      name: o.name,
+      description: o.description,
+      provider: { '@type': 'Organization', name: 'Boulder Circus Center' },
+      url: 'https://app.fitdegree.com/t/dashboard?co=305&f=325',
+    },
+  })),
+};
+---
+
+<Base
+  title="Adult Classes"
+  description="Adult circus classes at Boulder Circus Center — aerial, juggling, open gym, and workshops."
+  jsonLd={itemList}
+>
+  <section class="section">
+    <div class="container">
+      <h1>Adult classes</h1>
+      <p class="lead">
+        Run away to circus school. Aerial arts, juggling, open gym, and workshops for adults of all levels.
+      </p>
+      <div class="grid grid--2">
+        {adultOfferings.map((o) => (
+          <article class="card" id={o.id}>
+            <h2>{o.name}</h2>
+            <p class="meta">{o.ages}</p>
+            <p>{o.description}</p>
+            <p><strong>Schedule:</strong> {o.schedule}</p>
+            <p><strong>Price:</strong> {o.price}</p>
+            <a class="btn" href={o.portalUrl}>Register via FitDegree</a>
+          </article>
+        ))}
+      </div>
+      <p class="note">
+        Questions? Email <a href="mailto:classes@bouldercircuscenter.net">classes@bouldercircuscenter.net</a>.
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .meta {
+    color: var(--color-accent);
+    font-weight: 700;
+    margin-block-end: var(--space-sm);
+  }
+  .note {
+    margin-block-start: var(--space-xl);
+  }
+</style>

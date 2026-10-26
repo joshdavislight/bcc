@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+
+const pages = await getCollection('pages');
+const navItems = pages
+  .filter((p) => p.data.nav)
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((p) => ({ href: `/${p.id.replace(/\.md$/, '')}/`, label: p.data.title }));
+
+const home = { href: '/', label: 'Home' };
+const dataLinks = [
+  { href: '/youth/', label: 'Youth' },
+  { href: '/adult/', label: 'Adult' },
+  { href: '/facilities/', label: 'Facilities' },
+];
+const allItems = [home, ...dataLinks, ...navItems];
+---
+
+<header class="site-header">
+  <nav aria-label="Main">
+    <a class="logo" href="/" aria-label="Boulder Circus Center home">
+      <span class="logo__mark">BCC</span>
+      <span class="logo__text">Boulder Circus Center</span>
+    </a>
+    <button
+      class="nav-toggle"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+      aria-label="Toggle navigation"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="nav-menu" class="nav-menu" role="menubar">
+      {allItems.map((item) => (
+        <li role="none">
+          <a href={item.href} role="menuitem" class={Astro.url.pathname === item.href ? 'active' : ''}>
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('is-open');
+    });
+  }
+</script>

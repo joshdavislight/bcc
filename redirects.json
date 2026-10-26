@@ -1,0 +1,312 @@
+[
+  {
+    "from": "/",
+    "to": "/",
+    "reason": "home stays home"
+  },
+  {
+    "from": "/about/",
+    "to": "/",
+    "reason": "about folded into home"
+  },
+  {
+    "from": "/about/circus-props-products/",
+    "to": "/facilities/",
+    "reason": "orphaned product page"
+  },
+  {
+    "from": "/about/facilities/",
+    "to": "/facilities/",
+    "reason": "facilities page"
+  },
+  {
+    "from": "/about/independent-artist-program/",
+    "to": "/facilities/",
+    "reason": "orphaned program page"
+  },
+  {
+    "from": "/access-restriction/",
+    "to": "/",
+    "reason": "internal admin"
+  },
+  {
+    "from": "/acro/",
+    "to": "/adult/",
+    "reason": "class category"
+  },
+  {
+    "from": "/acrobatics/",
+    "to": "/adult/",
+    "reason": "class category"
+  },
+  {
+    "from": "/aerial-2/",
+    "to": "/adult/",
+    "reason": "class category"
+  },
+  {
+    "from": "/aerial-fabric/",
+    "to": "/adult/",
+    "reason": "class category post"
+  },
+  {
+    "from": "/aerial/",
+    "to": "/adult/",
+    "reason": "class category"
+  },
+  {
+    "from": "/api-test/",
+    "to": "/",
+    "reason": "internal test"
+  },
+  {
+    "from": "/approval/",
+    "to": "/",
+    "reason": "woocommerce internal"
+  },
+  {
+    "from": "/bcc-waivers/",
+    "to": "/waiver/",
+    "reason": "waiver duplicate"
+  },
+  {
+    "from": "/bcc-youth-classes-camps/",
+    "to": "/youth/",
+    "reason": "youth program duplicate"
+  },
+  {
+    "from": "/boulder-international-clown-school/",
+    "to": "/",
+    "reason": "old program"
+  },
+  {
+    "from": "/calendar-2/",
+    "to": "/adult/",
+    "reason": "old calendar root"
+  },
+  {
+    "from": "/calendar-2/calendar/",
+    "to": "/facilities/#calendar",
+    "reason": "renter calendar"
+  },
+  {
+    "from": "/cart/",
+    "to": "/",
+    "reason": "woocommerce retired"
+  },
+  {
+    "from": "/checkout/",
+    "to": "/",
+    "reason": "woocommerce retired"
+  },
+  {
+    "from": "/circus-in-the-sky-with-diamonds/",
+    "to": "/",
+    "reason": "past event"
+  },
+  {
+    "from": "/cirque-array-2018-2/",
+    "to": "/",
+    "reason": "past event"
+  },
+  {
+    "from": "/class-submission/",
+    "to": "/",
+    "reason": "internal form"
+  },
+  {
+    "from": "/classes/",
+    "to": "/adult/",
+    "reason": "class overview"
+  },
+  {
+    "from": "/contact/",
+    "to": "/contact/",
+    "reason": "contact stays"
+  },
+  {
+    "from": "/covid-19/",
+    "to": "/",
+    "reason": "expired page"
+  },
+  {
+    "from": "/csc/",
+    "to": "/",
+    "reason": "CSC folded into home section until page added"
+  },
+  {
+    "from": "/directions-to-bcc/",
+    "to": "/contact/",
+    "reason": "directions -> contact"
+  },
+  {
+    "from": "/events/",
+    "to": "/adult/",
+    "reason": "old events"
+  },
+  {
+    "from": "/hire_us/",
+    "to": "/contact/",
+    "reason": "hire us -> contact"
+  },
+  {
+    "from": "/home/",
+    "to": "/",
+    "reason": "duplicate home"
+  },
+  {
+    "from": "/host-close-out-tracking/",
+    "to": "/",
+    "reason": "internal admin"
+  },
+  {
+    "from": "/juggling-club/",
+    "to": "/adult/",
+    "reason": "class category post"
+  },
+  {
+    "from": "/juggling/",
+    "to": "/adult/",
+    "reason": "class category"
+  },
+  {
+    "from": "/maskarade/",
+    "to": "/",
+    "reason": "past event"
+  },
+  {
+    "from": "/movement-arts/",
+    "to": "/adult/",
+    "reason": "class category"
+  },
+  {
+    "from": "/my-account-2/",
+    "to": "/",
+    "reason": "woocommerce retired"
+  },
+  {
+    "from": "/my-account/",
+    "to": "/",
+    "reason": "woocommerce retired"
+  },
+  {
+    "from": "/open-gyms-jams/",
+    "to": "/adult/",
+    "reason": "class category"
+  },
+  {
+    "from": "/open-house/",
+    "to": "/",
+    "reason": "past event"
+  },
+  {
+    "from": "/paint-sip-registration/",
+    "to": "/",
+    "reason": "past event"
+  },
+  {
+    "from": "/participant-sign-in/",
+    "to": "/",
+    "reason": "internal admin"
+  },
+  {
+    "from": "/photo-gallery/",
+    "to": "/facilities/#gallery",
+    "reason": "gallery folded into facilities"
+  },
+  {
+    "from": "/pricing/",
+    "to": "/facilities/#rates",
+    "reason": "pricing folded into facilities"
+  },
+  {
+    "from": "/programs/",
+    "to": "/",
+    "reason": "old programs"
+  },
+  {
+    "from": "/register-to-rent-space-at-the-bcc/",
+    "to": "/facilities/",
+    "reason": "old rental reg"
+  },
+  {
+    "from": "/reserve-a-room/",
+    "to": "/facilities/#book",
+    "reason": "reserve room CTA"
+  },
+  {
+    "from": "/resources/",
+    "to": "/",
+    "reason": "old resources"
+  },
+  {
+    "from": "/sample-page/",
+    "to": "/",
+    "reason": "default sample page"
+  },
+  {
+    "from": "/shop/",
+    "to": "/",
+    "reason": "woocommerce retired"
+  },
+  {
+    "from": "/teacher-agreement/",
+    "to": "/facilities/",
+    "reason": "old agreement"
+  },
+  {
+    "from": "/teacher-packet-submission/",
+    "to": "/",
+    "reason": "internal form"
+  },
+  {
+    "from": "/team/",
+    "to": "/contact/",
+    "reason": "team roster -> contact"
+  },
+  {
+    "from": "/the-marvell-ous-haunted-toy-house/",
+    "to": "/",
+    "reason": "past event"
+  },
+  {
+    "from": "/user-agreement/",
+    "to": "/facilities/",
+    "reason": "old agreement"
+  },
+  {
+    "from": "/user-dashboard/",
+    "to": "/",
+    "reason": "woocommerce user dashboard"
+  },
+  {
+    "from": "/user-database/",
+    "to": "/",
+    "reason": "internal admin"
+  },
+  {
+    "from": "/waiver-archive/",
+    "to": "/waiver/",
+    "reason": "old waiver archive"
+  },
+  {
+    "from": "/waiver/",
+    "to": "/waiver/",
+    "reason": "waiver stays"
+  },
+  {
+    "from": "/wheels/",
+    "to": "/adult/",
+    "reason": "class category"
+  },
+  {
+    "from": "/workshop-submission/",
+    "to": "/",
+    "reason": "internal form"
+  },
+  {
+    "from": "/youth-classes/",
+    "to": "/youth/",
+    "reason": "youth program"
+  }
+]

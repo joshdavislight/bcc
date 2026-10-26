@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+import offerings from '../data/offerings.json';
+
+const youthOfferings = offerings.filter((o) => o.audience === 'youth' && o.active);
+
+const itemList = {
+  '@type': 'ItemList',
+  itemListElement: youthOfferings.map((o, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Course',
+      name: o.name,
+      description: o.description,
+      provider: { '@type': 'Organization', name: 'Boulder Circus Center' },
+      url: 'https://portal.iclasspro.com/bouldercircuscenter/classes',
+    },
+  })),
+};
+---
+
+<Base
+  title="Youth Classes"
+  description="Youth circus classes and camps at Boulder Circus Center — mixed circus, aerial arts, and teen cirque theater."
+  jsonLd={itemList}
+>
+  <section class="section">
+    <div class="container">
+      <h1>Youth classes & camps</h1>
+      <p class="lead">
+        Circus arts for kids and teens. Session-based classes in mixed circus, aerial arts, and creative circus theater.
+      </p>
+      <div class="grid grid--2">
+        {youthOfferings.map((o) => (
+          <article class="card" id={o.id}>
+            <h2>{o.name}</h2>
+            <p class="meta">{o.ages}</p>
+            <p>{o.description}</p>
+            <p><strong>Schedule:</strong> {o.schedule}</p>
+            <p><strong>Price:</strong> {o.price}</p>
+            <a class="btn" href={o.portalUrl}>Register via iClassPro</a>
+          </article>
+        ))}
+      </div>
+      <p class="note">
+        Have questions? Email <a href="mailto:youth@bouldercircuscenter.net">youth@bouldercircuscenter.net</a>.
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .meta {
+    color: var(--color-accent);
+    font-weight: 700;
+    margin-block-end: var(--space-sm);
+  }
+  .note {
+    margin-block-start: var(--space-xl);
+  }
+</style>

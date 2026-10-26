@@ -1,0 +1,133 @@
+---
+import Base from '../layouts/Base.astro';
+import offerings from '../data/offerings.json';
+
+const localBusiness = {
+  '@type': 'LocalBusiness',
+  name: 'Boulder Circus Center',
+  description: 'A place for circus in Boulder — classes, workshops, and rental space for circus artists.',
+  url: 'https://bouldercircuscenter.net',
+  telephone: '+1-303-444-8110',
+  email: 'bouldercircuscenter@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '4747 26th St',
+    addressLocality: 'Boulder',
+    addressRegion: 'CO',
+    postalCode: '80301',
+    addressCountry: 'US',
+  },
+};
+---
+
+<Base
+  title="Boulder Circus Center"
+  description="A place for circus in Boulder. Youth and adult classes, workshops, and rental space for circus artists."
+  jsonLd={localBusiness}
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Dream big and take flight</h1>
+      <p class="lead">Youth classes, adult training, and rental space for circus artists in Boulder, Colorado.</p>
+      <div class="hero__actions">
+        <a class="btn" href="/youth/">Youth programs</a>
+        <a class="btn btn--secondary" href="/adult/">Adult classes</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>This week's highlights</h2>
+      <ul class="grid grid--3">
+        {offerings.filter((o) => o.active).slice(0, 3).map((o) => (
+          <li class="card">
+            <h3>{o.name}</h3>
+            <p>{o.description}</p>
+            <a class="btn" href={o.portalUrl}>Register</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container">
+      <h2>Visit us</h2>
+      <p>
+        <strong>Boulder Circus Center</strong><br />
+        4747 26th St, Boulder, CO 80301<br />
+        <a href="tel:+13034448110">(303) 444-8110</a>
+      </p>
+      <a class="btn" href="/contact/">Plan your first visit</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Stay in the loop</h2>
+      <p>Get class updates, workshop announcements, and show news.</p>
+      <form action="https://bouldercircuscenter.us3.list-manage.com/subscribe/post" method="post" target="_blank" class="newsletter">
+        <input type="hidden" name="u" value="f0bffd12c12aabc4502485999" />
+        <input type="hidden" name="id" value="8d4d74acac" />
+        <label>
+          <span class="visually-hidden">Email address</span>
+          <input type="email" name="EMAIL" placeholder="you@example.com" required />
+        </label>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    padding-block: var(--space-3xl);
+    background: linear-gradient(135deg, var(--color-ink), var(--color-ink-light));
+    color: var(--color-paper);
+    text-align: center;
+  }
+
+  .hero h1 {
+    color: var(--color-paper);
+  }
+
+  .hero .lead {
+    color: rgba(255, 255, 255, 0.85);
+    margin-inline: auto;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-block-start: var(--space-xl);
+  }
+
+  .newsletter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    max-width: var(--measure);
+  }
+
+  .newsletter input {
+    flex: 1 1 12rem;
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>

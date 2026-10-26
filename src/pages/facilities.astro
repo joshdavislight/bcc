@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import rooms from '../data/rooms.json';
+
+const localBusiness = {
+  '@type': 'LocalBusiness',
+  name: 'Boulder Circus Center',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '4747 26th St',
+    addressLocality: 'Boulder',
+    addressRegion: 'CO',
+    postalCode: '80301',
+    addressCountry: 'US',
+  },
+};
+---
+
+<Base
+  title="Facilities & Rentals"
+  description="Rent studio space at Boulder Circus Center. Sprung floors, rig points, theatrical lighting, and more."
+  jsonLd={localBusiness}
+>
+  <section class="section">
+    <div class="container">
+      <h1>Facilities & rentals</h1>
+      <p class="lead">
+        10,000 square feet of training space in North Boulder: sprung floors, rig points, theatrical lighting, and a beautiful five-acre lot.
+      </p>
+
+      <h2 id="rooms">Rooms</h2>
+      <div class="grid grid--2">
+        {rooms.map((room) => (
+          <article class="card" id={room.id}>
+            <h3>{room.name}</h3>
+            <p><strong>Dimensions:</strong> {room.dimensions}</p>
+            <p><strong>Ceiling:</strong> {room.ceiling}</p>
+            <p><strong>Floor:</strong> {room.floor}</p>
+            <ul>
+              {room.features.map((f) => <li>{f}</li>)}
+            </ul>
+            <p class="rate">{room.rate}</p>
+          </article>
+        ))}
+      </div>
+
+      <h2 id="rates">Rates & policies</h2>
+      <p>Rates listed are hourly. Pricing doubles for groups over 40 people.</p>
+      <p>
+        <strong>Cancellation policy:</strong> full refund minus a $5 cancellation fee for cancellations more than 14 days out;
+        50% refund within 14 days; up to 10 refunded cancellations per year; reservations may be transferred to another registered user.
+      </p>
+      <p>
+        Teachers and companies must carry liability insurance naming Boulder Circus Center LLC as additional insured when feet leave the ground.
+        Individuals rehearsing aerial or balance activities must have a BCC trainer present.
+      </p>
+      <a class="btn" href="#book" id="book">Book a room</a>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="calendar">
+    <div class="container">
+      <h2>Renter's calendar</h2>
+      <p>See availability and request a booking through Skedda.</p>
+      <div class="calendar-embed">
+        <p><em>Skedda calendar embed will go here.</em></p>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .rate {
+    font-size: var(--font-size-md);
+    color: var(--color-accent);
+    font-weight: 700;
+    margin-block-start: var(--space-md);
+  }
+  .calendar-embed {
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius);
+    padding: var(--space-2xl);
+    text-align: center;
+    color: var(--color-text-muted);
+  }
+</style>
