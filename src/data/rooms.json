@@ -6,7 +6,8 @@
     "ceiling": "18′ 6″",
     "floor": "Sprung oak floor with black Marley available",
     "features": ["8 steel I-beams", "theatre curtain"],
-    "rate": "$25/hour"
+    "rate": "$25/hour",
+    "image": "/images/hero-facilities.webp"
   },
   {
     "id": "rastelli-aerial",
@@ -15,7 +16,8 @@
     "ceiling": "up to 27′",
     "floor": "Sprung oak floor",
     "features": ["5 steel I-beams", "mirrored wall"],
-    "rate": "$25/hour"
+    "rate": "$25/hour",
+    "image": "/images/facilities-rastelli-aerial.webp"
   },
   {
     "id": "rastelli-full",
@@ -24,7 +26,8 @@
     "ceiling": "18′ – 27′",
     "floor": "Sprung oak floor",
     "features": ["13 steel I-beams", "mirrored wall", "theatre curtain"],
-    "rate": "$40/hour"
+    "rate": "$40/hour",
+    "image": "/images/hero-facilities.webp"
   },
   {
     "id": "trixie",
@@ -33,7 +36,8 @@
     "ceiling": "14′ – 16′",
     "floor": "Sprung oak floor with black Marley available",
     "features": ["14 rig points", "mirrors"],
-    "rate": "$20/hour"
+    "rate": "$20/hour",
+    "image": "/images/facilities-trixie.webp"
   },
   {
     "id": "workshop",
@@ -42,6 +46,7 @@
     "ceiling": "12′",
     "floor": "Sprung oak floor",
     "features": ["stereo system", "great for small classes"],
-    "rate": "$10/hour"
+    "rate": "$10/hour",
+    "image": "/images/facilities-workshop.webp"
   }
 ]

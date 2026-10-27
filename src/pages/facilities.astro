@@ -18,47 +18,213 @@ const localBusiness = {
 
 <Base
   title="Facilities & Rentals"
-  description="Rent studio space at Boulder Circus Center. Sprung floors, rig points, theatrical lighting, and more."
+  description="Rent studio space at Boulder Circus Center. 10,000 sq ft with sprung floors, rig points, theatrical lighting, and more."
   jsonLd={localBusiness}
 >
   <section class="section">
     <div class="container">
-      <h1>Facilities & rentals</h1>
+      <h1>The Boulder Circus Center Facilities</h1>
       <p class="lead">
-        10,000 square feet of training space in North Boulder: sprung floors, rig points, theatrical lighting, and a beautiful five-acre lot.
+        The Boulder Circus Center is a 10,000 sq ft training space located in North Boulder. The center houses 3 different studios as well as community spaces and technical areas.
       </p>
+      <nav aria-label="Facility sections" class="toc">
+        <a href="#rastelli">The Rastelli Room</a>
+        <a href="#trixie">The Trixie Room</a>
+        <a href="#workshop">The Workshop</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#rates">Rates & policies</a>
+      </nav>
+    </div>
+  </section>
 
+  <section class="section section--cream" id="requirements">
+    <div class="container">
+      <h2>Facility Use Requirements</h2>
+      <p>
+        If you are a teacher or company wishing to hold classes in a studio, the following requirements apply:
+      </p>
+      <ul>
+        <li>
+          <strong>FIRST AID:</strong> Any teacher must have a current first aid certification. Any additional or substitute teacher for the primary company/renter must also be first aid certified and must be on record at the BCC as a teacher for the company.
+        </li>
+        <li>
+          <strong>INSURANCE:</strong> Any individual, teacher, company, or legal entity planning to teach or rehearse any activity where anyone’s (student or teacher) feet leave the ground through mechanical means (unicycle, stilts, rolling-globe, trampoline, rolla-bolla, aerial apparatus of all kinds), needs to have a liability insurance policy naming “Boulder Circus Center LLC” as also insured.
+        </li>
+      </ul>
+      <p>If you are an individual wishing to rehearse in a studio:</p>
+      <ul>
+        <li>
+          An individual or small group (but not a teacher or a company) wishing to rehearse activities where their feet leave the ground through mechanical means must have a BCC trainer knowledgeable in the field present for spotting, safety and insurance reasons.
+        </li>
+        <li>
+          If you are an individual and you wish to teach activities where a student’s feet leave the ground through mechanical means, then you must have your own liability insurance naming Boulder Circus Center LLC as also insured.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
       <h2 id="rooms">Rooms</h2>
       <div class="grid grid--2">
         {rooms.map((room) => (
           <article class="card" id={room.id}>
-            <h3>{room.name}</h3>
-            <p><strong>Dimensions:</strong> {room.dimensions}</p>
-            <p><strong>Ceiling:</strong> {room.ceiling}</p>
-            <p><strong>Floor:</strong> {room.floor}</p>
-            <ul>
-              {room.features.map((f) => <li>{f}</li>)}
-            </ul>
-            <p class="rate">{room.rate}</p>
+            {room.image && (
+              <div class="card__media">
+                <img src={room.image} alt={`${room.name} at Boulder Circus Center`} loading="lazy" />
+              </div>
+            )}
+            <div class="card__content">
+              <h3>{room.name}</h3>
+              <p><strong>Dimensions:</strong> {room.dimensions}</p>
+              <p><strong>Ceiling:</strong> {room.ceiling}</p>
+              <p><strong>Floor:</strong> {room.floor}</p>
+              <ul>
+                {room.features.map((f) => <li>{f}</li>)}
+              </ul>
+              <p class="rate">{room.rate}</p>
+            </div>
           </article>
         ))}
       </div>
+    </div>
+  </section>
 
-      <h2 id="rates">Rates & policies</h2>
+  <section class="section section--purple" id="rastelli">
+    <div class="container">
+      <h2 class="display">The Rastelli Room</h2>
+      <p>
+        The Rastelli room is the largest of the studios at the BCC. It has a sprung oak floor with Harlequin dance floor specs. Lights in the room point upward, and natural lighting and fresh air are plentiful. The Rastelli room can be divided into two areas which can be rented separately.
+      </p>
+      <div class="grid grid--2">
+        <div class="feature-block">
+          <h3>The Theatre Area</h3>
+          <p>Designed to be a theatre rehearsal space.</p>
+          <ul>
+            <li>Dimensions: 35′ × 60′ wide, 18′ 6″ high</li>
+            <li>I-Beams: 8 steel I-beams each 34 feet long where hang-points can be located. Steel I-beams run front to back in the theatre area and are spaced 8′ on center.</li>
+            <li>Other: A black Marley floor is available for this area; special fees and advance arrangements apply.</li>
+          </ul>
+        </div>
+        <div class="feature-block">
+          <h3>The Aerial Corridor</h3>
+          <p>Designed for aerial arts and acrobatics.</p>
+          <ul>
+            <li>Dimensions: 25′ × 60′ wide, sloping ceiling up to 27 feet high</li>
+            <li>I-Beams: five steel I-beams for hang points — one center beam at 26′ 2″ (requires beam clamps), two beams on either side at 23′ 2″, and two outside beams at 20′ 6″</li>
+            <li>Other: mirrored wall, 40′ wide by 9′ high</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="trixie">
+    <div class="container">
+      <h2 class="display">The Trixie Room</h2>
+      <p>
+        The Trixie room is the medium sized upstairs studio at the BCC. It has a sprung oak floor with ample lighting as well as more intimate lighting options, and natural lighting and fresh air are plentiful. The Trixie room is a great space for smaller rehearsals, dance classes, or private aerial classes.
+      </p>
+      <ul>
+        <li>Dimensions: 25′ × 31′ wide, 14′ – 16′ high</li>
+        <li>14 aerial points — 7 at 14′, 7 at 16′</li>
+        <li>Mirrors cover half of one of the walls</li>
+        <li>A black Marley floor is available for this area; special fees and advance arrangements apply</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="workshop">
+    <div class="container">
+      <div class="grid grid--2 feature-row">
+        <div>
+          <h2 class="display">The Workshop</h2>
+          <p>
+            The Workshop is the Boulder Circus Center’s newest and smallest available room. It has a sprung oak floor with ample lighting, a stereo system, and a 12 foot ceiling. The Workshop is great for small classes and one-on-one workshops.
+          </p>
+        </div>
+        <div class="feature-media">
+          <img src="/images/facilities-workshop.webp" alt="The Workshop studio at Boulder Circus Center" width="800" height="534" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="amenities">
+    <div class="container">
+      <h2 class="display">Light Booth</h2>
+      <p>
+        The light booth overlooks the Rastelli Room on the Aerial Corridor side. The booth is available for rental and has the following specs:
+      </p>
+      <ul>
+        <li>ETC 48/96 light board with 48 dimming channels rated for 2K of lighting each</li>
+        <li>12 cyc lights in 4 sets of 3 colors, 1000 watts</li>
+        <li>8 par 64 lights as high sides, 1000 watt</li>
+        <li>24 fresnels as overhead wash, 750 watt</li>
+        <li>18 lekos as front of house wash, 1000 watt</li>
+      </ul>
+
+      <h2 class="display">Green Room</h2>
+      <p>
+        The Green Room is a community space located upstairs and has the following amenities:
+      </p>
+      <ul>
+        <li>Coffee and Espresso Machines</li>
+        <li>Small Refrigerator</li>
+        <li>Ample Seating</li>
+        <li>Desk & Table Space</li>
+        <li>Free Wifi</li>
+      </ul>
+      <div class="feature-media feature-media--inline">
+        <img src="/images/facilities-green-room.webp" alt="The Green Room community space" width="800" height="498" loading="lazy" />
+      </div>
+
+      <h2 class="display">The Garage</h2>
+      <p>
+        The garage is a multi-purpose storage area at the BCC.
+      </p>
+      <ul>
+        <li>20 foot ceilings</li>
+        <li>Floor to ceiling garage door</li>
+        <li>Lots of shelving space</li>
+        <li>Send us a message if you are interested in storing gear in the garage</li>
+      </ul>
+      <div class="feature-media feature-media--inline">
+        <img src="/images/facilities-garage.webp" alt="The Garage storage area" width="800" height="600" loading="lazy" />
+      </div>
+
+      <h2 class="display">The Grounds</h2>
+      <p>
+        The Boulder Circus Center is located on a beautiful 5 acre parcel with a great western view of the foothills and beyond.
+      </p>
+      <ul>
+        <li>Community Garden</li>
+        <li>Yoga Deck</li>
+        <li>Picnic Tables</li>
+        <li>Large Parking Lot</li>
+      </ul>
+      <div class="feature-media feature-media--inline">
+        <img src="/images/facilities-grounds.webp" alt="The Boulder Circus Center grounds and foothills view" width="800" height="448" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="rates">
+    <div class="container">
+      <h2>Rates & policies</h2>
       <p>Rates listed are hourly. Pricing doubles for groups over 40 people.</p>
+      <p>
+        If you have questions about the rental/insurance policy, please feel free to contact the <a href="/contact/">building managers</a> for more details.
+      </p>
       <p>
         <strong>Cancellation policy:</strong> full refund minus a $5 cancellation fee for cancellations more than 14 days out;
         50% refund within 14 days; up to 10 refunded cancellations per year; reservations may be transferred to another registered user.
-      </p>
-      <p>
-        Teachers and companies must carry liability insurance naming Boulder Circus Center LLC as additional insured when feet leave the ground.
-        Individuals rehearsing aerial or balance activities must have a BCC trainer present.
       </p>
       <a class="btn" href="#book" id="book">Book a room</a>
     </div>
   </section>
 
-  <section class="section section--cream" id="calendar">
+  <section class="section" id="calendar">
     <div class="container">
       <h2>Renter's calendar</h2>
       <p>See availability and request a booking through Skedda.</p>
@@ -70,12 +236,61 @@ const localBusiness = {
 </Base>
 
 <style>
+  .toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-block-start: var(--space-xl);
+  }
+
+  .toc a {
+    font-weight: 700;
+    text-decoration: none;
+  }
+
   .rate {
     font-size: var(--font-size-md);
     color: var(--color-accent);
     font-weight: 700;
-    margin-block-start: var(--space-md);
+    margin-block-start: auto;
+    padding-block-start: var(--space-md);
   }
+
+  .feature-block {
+    padding: var(--space-lg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .feature-block h3 {
+    color: var(--bcc-white);
+    margin-block-start: 0;
+  }
+
+  .feature-block ul,
+  .feature-block p {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .feature-row {
+    align-items: center;
+  }
+
+  .feature-media {
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .feature-media img {
+    width: 100%;
+    height: auto;
+  }
+
+  .feature-media--inline {
+    margin-block: var(--space-lg);
+  }
+
   .calendar-embed {
     border: 2px dashed var(--color-border);
     border-radius: var(--radius);

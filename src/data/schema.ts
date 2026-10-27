@@ -22,6 +22,7 @@ export const RoomSchema = z.object({
   features: z.array(z.string()),
   rate: z.string().min(1),
   photos: z.array(z.string().url()).optional(),
+  image: z.string().optional(),
 });
 
 export type Offering = z.infer<typeof OfferingSchema>;

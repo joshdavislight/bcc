@@ -27,10 +27,46 @@ const itemList = {
 >
   <section class="section">
     <div class="container">
-      <h1>Youth classes & camps</h1>
+      <h1>Welcome to our Youth Program</h1>
       <p class="lead">
-        Circus arts for kids and teens. Session-based classes in mixed circus, aerial arts, and creative circus theater.
+        At the Boulder Circus Center, we are passionate about bringing the magic of circus arts to children of all ages. Whether they’re taking their first steps into the world of circus or perfecting their skills, we provide a fun, safe, and supportive environment where kids can grow, learn, and have a blast!
       </p>
+      <p>
+        <a class="btn" href="https://portal.iclasspro.com/bouldercircuscenter">Register for camps & classes</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container">
+      <h2 class="display">Why Choose Us?</h2>
+      <ul class="grid grid--3">
+        <li class="card card--plain">
+          <h3 class="display">Expert Coaches</h3>
+          <p>All of our instructors are experienced circus artists and passionate about teaching.</p>
+        </li>
+        <li class="card card--plain">
+          <h3 class="display">Fun, Safe Environment</h3>
+          <p>We prioritize safety while fostering a space for kids to have fun and explore their creativity.</p>
+        </li>
+        <li class="card card--plain">
+          <h3 class="display">Small Class Sizes</h3>
+          <p>With a low student-to-teacher ratio, your child will receive personalized attention to help them grow and succeed.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="display">Class Offerings</h2>
+      <p class="section__intro">
+        Our classes are session-based, meaning each session runs for a set period and registration is open only during specific windows. Once registration for a session is closed, it will not reopen until the next session begins.
+      </p>
+      <p>
+        <em>We offer a range of exciting classes, tailored to different age groups and skill levels, to help every child discover the magic of circus arts!</em>
+      </p>
+
       <div class="grid grid--2">
         {youthOfferings.map((o) => (
           <article class="card" id={o.id}>
@@ -43,8 +79,37 @@ const itemList = {
           </article>
         ))}
       </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container">
+      <h2 class="display">Be the first to know!</h2>
+      <p>
+        Make an account and opt-in for email blasts to be the first to know when registrations go live via our <a href="https://portal.iclasspro.com/bouldercircuscenter/dashboard">iClass customer portal</a>.
+      </p>
+      <p>
+        If you have any questions regarding home-rigging and safe practices, please refer to the <a href="https://bouldercircuscenter.net/wp-content/uploads/2025/02/Home-Rigging-Dangers-_-Safe-Practices-Guide.pdf">Safety Manual</a>.
+      </p>
+
+      <h3 class="display">Download the iClass Youth Portal App</h3>
+      <p>
+        Stay connected with class schedules, announcements, and updates on your phone! Search organization name: “bouldercircuscenter” after downloading the app.
+      </p>
+      <ul>
+        <li><a href="https://apps.apple.com/us/app/the-iclasspro-app/id1331001591">Apple App Store</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.iclasspro.customerportal">Google Play Store</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
       <p class="note">
-        Have questions? Email <a href="mailto:youth@bouldercircuscenter.net">youth@bouldercircuscenter.net</a>.
+        Please email our Youth Director, Cressie Mae, with any questions: <a href="mailto:youth@bouldercircuscenter.net">youth@bouldercircuscenter.net</a>
+      </p>
+      <p>
+        <a class="btn" href="https://portal.iclasspro.com/bouldercircuscenter">Log in to Youth Portal</a>
       </p>
     </div>
   </section>
@@ -56,7 +121,22 @@ const itemList = {
     font-weight: 700;
     margin-block-end: var(--space-sm);
   }
+
   .note {
-    margin-block-start: var(--space-xl);
+    margin-block-end: var(--space-lg);
+  }
+
+  .section__intro {
+    max-width: var(--measure);
+  }
+
+  .card--plain {
+    padding: var(--space-xl);
+    background-color: var(--color-paper);
+  }
+
+  .card--plain h3 {
+    font-size: var(--font-size-md);
+    margin-block-start: 0;
   }
 </style>
