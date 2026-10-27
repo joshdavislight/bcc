@@ -4,9 +4,11 @@
 
 - **Astro 7** with static output
 - **TypeScript** for config and components
-- **Zod** for content and data validation
+- **Zod** (via `astro/zod`) for content and data validation
 - **GitHub Pages** for hosting
 - **GitHub Actions** for CI/CD
+
+**Node requirement:** >=22.22.0 (`.nvmrc` pins 22.23.4).
 
 ## Content flow
 

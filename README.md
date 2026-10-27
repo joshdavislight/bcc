@@ -15,12 +15,17 @@ Phase 1 scaffold complete. Design pass and content polish are next.
 
 ## Quick start
 
+This project requires **Node.js 22.22.0 or newer**. Use the included `.nvmrc` to match the version:
+
 ```bash
+nvm use
 npm install
 npm run dev
 ```
 
 Open the URL printed in the terminal.
+
+If you don't use `nvm`, install Node `22.23.4` (or any `>=22.22.0`) manually. `npm install` will fail with a clear message if your Node version is too old.
 
 ```bash
 npm run check   # validate everything before committing

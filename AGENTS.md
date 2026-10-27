@@ -58,8 +58,9 @@ npm run build
 ## Tech notes
 
 - Astro 7, static output, trailing-slash URLs.
-- Content collections use Zod schemas in `src/content/config.ts`.
+- Content collections use Zod schemas via `astro/zod`.
 - Data files use Zod schemas in `src/data/schema.ts`.
+- Requires Node.js **>=22.22.0**. Use `nvm use` to read `.nvmrc`.
 - GitHub Pages cannot serve 301s; redirects are generated as meta-refresh stubs from `redirects.json`.
 
 ## If something breaks
