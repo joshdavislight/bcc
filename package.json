@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.1.0",
   "engines": {
-    "node": ">=22.23.4"
+    "node": ">=22.14.0"
   },
   "scripts": {
     "dev": "astro dev",
@@ -14,11 +14,11 @@
     "new:page": "node scripts/new-page.mjs"
   },
   "dependencies": {
-    "astro": "^7.4.2",
-    "zod": "^4.6.7"
+    "astro": "^4.16.19",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.12",
-    "typescript": "^6.0.3"
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.6.3"
   }
 }

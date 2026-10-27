@@ -5,7 +5,7 @@ const pages = await getCollection('pages');
 const navItems = pages
   .filter((p) => p.data.nav)
   .sort((a, b) => a.data.order - b.data.order)
-  .map((p) => ({ href: `/${p.id.replace(/\.md$/, '')}/`, label: p.data.title }));
+  .map((p) => ({ href: `/${p.slug}/`, label: p.data.title }));
 
 const home = { href: '/', label: 'Home' };
 const dataLinks = [

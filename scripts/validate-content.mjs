@@ -10,7 +10,7 @@ const OfferingSchema = z.object({
   schedule: z.string().min(1),
   price: z.string().min(1),
   instructor: z.string().optional(),
-  portalUrl: z.url(),
+  portalUrl: z.string().url(),
   active: z.boolean().default(true),
 });
 
@@ -22,7 +22,7 @@ const RoomSchema = z.object({
   floor: z.string().min(1),
   features: z.array(z.string()),
   rate: z.string().min(1),
-  photos: z.array(z.url()).optional(),
+  photos: z.array(z.string().url()).optional(),
 });
 
 function fail(message) {
