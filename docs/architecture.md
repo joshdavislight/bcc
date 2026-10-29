@@ -23,7 +23,8 @@ src/data/rooms.json      →  facilities.astro  →  room cards
 1. `astro check` validates TypeScript and content collection types.
 2. `node scripts/validate-content.mjs` validates JSON data files.
 3. `astro build` generates the static site in `dist/`.
-4. (Deploy) GitHub Pages serves `dist/` from the `gh-pages` branch or the configured Pages source.
+4. `node scripts/postbuild.mjs` generates redirect stubs from `redirects.json` and writes `sitemap.xml`.
+5. (Deploy) GitHub Pages serves `dist/` via the configured Pages source.
 
 ## Redirects
 

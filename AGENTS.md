@@ -14,6 +14,7 @@ You are editing a static website built with Astro. Before making changes, read t
 | `src/components/*.astro` | Reusable components. |
 | `src/styles/*.css` | Design tokens and styles. Prefer editing tokens over one-off rules. |
 | `redirects.json` | Old URL → new URL map for migration. |
+| `scripts/postbuild.mjs` | Generates redirect stubs and `sitemap.xml` after `astro build`. |
 | `.github/workflows/` | CI/CD — do not edit unless asked. |
 | `docs/` | Human and agent documentation. |
 

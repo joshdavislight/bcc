@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="Page not found"
+  description="We couldn't find that page. Try one of these links or get in touch."
+  noindex={true}
+>
+  <section class="section">
+    <div class="container">
+      <h1 class="display">Page not found</h1>
+      <p class="lead">
+        We couldn't find that page. It may have moved or been removed.
+      </p>
+      <ul class="grid grid--3">
+        <li class="card card--plain">
+          <a class="display" href="/">Home</a>
+        </li>
+        <li class="card card--plain">
+          <a class="display" href="/youth/">Youth</a>
+        </li>
+        <li class="card card--plain">
+          <a class="display" href="/adult/">Adult</a>
+        </li>
+        <li class="card card--plain">
+          <a class="display" href="/facilities/">Facilities</a>
+        </li>
+        <li class="card card--plain">
+          <a class="display" href="/contact/">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</Base>

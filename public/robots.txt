@@ -10,4 +10,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://bouldercircuscenter.net/sitemap-index.xml
+Sitemap: https://bouldercircuscenter.net/sitemap.xml
