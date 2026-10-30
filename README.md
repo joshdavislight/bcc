@@ -11,7 +11,7 @@ A lightweight, static website for the Boulder Circus Center, replacing a WordPre
 
 ## Status
 
-Phase 1 scaffold complete. Design pass and content polish are next.
+Phases 0–3 and deploy plumbing are complete. Preview: https://dev.bouldercircuscenter.net/. Next: adult page content, then contact/waiver, then the design motion pass.
 
 ## Quick start
 
@@ -36,6 +36,7 @@ npm run build   # generate the static site in dist/
 
 - `docs/editing.md` — how to add pages and edit content
 - `docs/architecture.md` — stack, content flow, build pipeline
+- `docs/deploy.md` — deploy, DNS, and cutover checklist
 - `AGENTS.md` — instructions for AI agents working on this repo
 
 ## Key decisions
