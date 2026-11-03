@@ -7,7 +7,7 @@
     "floor": "Sprung oak floor with black Marley available",
     "features": ["8 steel I-beams", "theatre curtain"],
     "rate": "$25/hour",
-    "image": "/images/hero-facilities.webp"
+    "image": "/images/facilities-rastelli.webp"
   },
   {
     "id": "rastelli-aerial",
@@ -27,7 +27,7 @@
     "floor": "Sprung oak floor",
     "features": ["13 steel I-beams", "mirrored wall", "theatre curtain"],
     "rate": "$40/hour",
-    "image": "/images/hero-facilities.webp"
+    "image": "/images/facilities-rastelli.webp"
   },
   {
     "id": "trixie",
