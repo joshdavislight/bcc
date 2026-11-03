@@ -222,17 +222,24 @@ const localBusiness = {
         <strong>Cancellation policy:</strong> full refund minus a $5 cancellation fee for cancellations more than 14 days out;
         50% refund within 14 days; up to 10 refunded cancellations per year; reservations may be transferred to another registered user.
       </p>
-      <a class="btn" href="#book" id="book">Book a room</a>
+      <p id="book" class="book">
+        <a class="btn" href="https://allbooked33553145.skedda.com/booking" target="_blank" rel="noopener">Book a room</a>
+      </p>
     </div>
   </section>
 
   <section class="section section--cream" id="calendar">
     <div class="container">
       <h2>Renter's calendar</h2>
-      <p>See availability and request a booking through Skedda.</p>
-      <div class="calendar-embed">
-        <p><em>Skedda calendar embed will go here.</em></p>
-      </div>
+      <p>
+        Availability and bookings live in Skedda — pick a room, choose your hours, and pay there.
+      </p>
+      <p>
+        <a class="btn" href="https://allbooked33553145.skedda.com/booking" target="_blank" rel="noopener">Open the booking calendar</a>
+      </p>
+      <p class="note">
+        Need to change or cancel a booking, or ask about a rate? <a href="/contact/">Contact the building managers</a>.
+      </p>
     </div>
   </section>
 </Base>
@@ -354,11 +361,13 @@ const localBusiness = {
     padding-inline-start: 1.1em;
   }
 
-  .calendar-embed {
-    border: 2px dashed var(--color-border);
-    border-radius: var(--radius);
-    padding: var(--space-2xl);
-    text-align: center;
+  .book {
+    margin-block: var(--space-lg) 0;
+  }
+
+  .note {
     color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    margin-block-end: 0;
   }
 </style>

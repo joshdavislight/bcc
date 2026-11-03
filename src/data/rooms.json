@@ -5,8 +5,11 @@
     "dimensions": "35′ × 60′",
     "ceiling": "18′ 6″",
     "floor": "Sprung oak floor with black Marley available",
-    "features": ["8 steel I-beams", "theatre curtain"],
-    "rate": "$25/hour",
+    "features": [
+      "8 steel I-beams",
+      "theatre curtain"
+    ],
+    "rate": "$30/hour",
     "image": "/images/facilities-rastelli.webp"
   },
   {
@@ -15,8 +18,11 @@
     "dimensions": "25′ × 60′",
     "ceiling": "up to 27′",
     "floor": "Sprung oak floor",
-    "features": ["5 steel I-beams", "mirrored wall"],
-    "rate": "$25/hour",
+    "features": [
+      "5 steel I-beams",
+      "mirrored wall"
+    ],
+    "rate": "$30/hour",
     "image": "/images/facilities-rastelli-aerial.webp"
   },
   {
@@ -25,8 +31,12 @@
     "dimensions": "60′ × 60′",
     "ceiling": "18′ – 27′",
     "floor": "Sprung oak floor",
-    "features": ["13 steel I-beams", "mirrored wall", "theatre curtain"],
-    "rate": "$40/hour",
+    "features": [
+      "13 steel I-beams",
+      "mirrored wall",
+      "theatre curtain"
+    ],
+    "rate": "$45/hour",
     "image": "/images/facilities-rastelli.webp"
   },
   {
@@ -35,8 +45,11 @@
     "dimensions": "31′ × 21′",
     "ceiling": "14′ – 16′",
     "floor": "Sprung oak floor with black Marley available",
-    "features": ["14 rig points", "mirrors"],
-    "rate": "$20/hour",
+    "features": [
+      "14 rig points",
+      "mirrors"
+    ],
+    "rate": "$25/hour",
     "image": "/images/facilities-trixie.webp"
   },
   {
@@ -45,8 +58,11 @@
     "dimensions": "16′ × 21′",
     "ceiling": "12′",
     "floor": "Sprung oak floor",
-    "features": ["stereo system", "great for small classes"],
-    "rate": "$10/hour",
+    "features": [
+      "stereo system",
+      "great for small classes"
+    ],
+    "rate": "$15/hour",
     "image": "/images/facilities-workshop.webp"
   }
 ]
