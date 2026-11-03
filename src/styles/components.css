@@ -20,6 +20,13 @@
   color: var(--bcc-white);
 }
 
+.section--purple h1,
+.section--purple h2,
+.section--purple h3,
+.section--purple h4 {
+  color: var(--bcc-white);
+}
+
 .label {
   display: block;
   margin-block-end: var(--space-sm);
