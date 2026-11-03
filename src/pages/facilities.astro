@@ -223,7 +223,7 @@ const localBusiness = {
         50% refund within 14 days; up to 10 refunded cancellations per year; reservations may be transferred to another registered user.
       </p>
       <p id="book" class="book">
-        <a class="btn" href="https://allbooked33553145.skedda.com/booking" target="_blank" rel="noopener">Book a room</a>
+        <a class="btn" href="https://bcc.skedda.com/booking" target="_blank" rel="noopener">Book a room</a>
       </p>
     </div>
   </section>
@@ -234,8 +234,16 @@ const localBusiness = {
       <p>
         Availability and bookings live in Skedda — pick a room, choose your hours, and pay there.
       </p>
-      <p>
-        <a class="btn" href="https://allbooked33553145.skedda.com/booking" target="_blank" rel="noopener">Open the booking calendar</a>
+      <div class="allbooked-embed">
+        <iframe
+          src="https://bcc.skedda.com/booking?embedded=true"
+          title="Boulder Circus Center booking calendar"
+          style="width:100%;height:1000px;border:0;"
+        ></iframe>
+        <small>Booking system by <a href="https://www.allbooked.com">AllBooked</a></small>
+      </div>
+      <p class="note">
+        Calendar not loading? <a href="https://bcc.skedda.com/booking" target="_blank" rel="noopener">Open it in Skedda</a>.
       </p>
       <p class="note">
         Need to change or cancel a booking, or ask about a rate? <a href="/contact/">Contact the building managers</a>.
@@ -369,5 +377,22 @@ const localBusiness = {
     color: var(--color-text-muted);
     font-size: var(--font-size-sm);
     margin-block-end: 0;
+  }
+
+  .allbooked-embed {
+    margin-block: var(--space-lg);
+  }
+
+  .allbooked-embed iframe {
+    display: block;
+    border-radius: var(--radius);
+    background-color: var(--color-paper);
+  }
+
+  .allbooked-embed small {
+    display: block;
+    margin-block-start: var(--space-sm);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
   }
 </style>
