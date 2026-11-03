@@ -162,62 +162,68 @@ const localBusiness = {
 
   <section class="section" id="amenities">
     <div class="container">
-      <h2 class="display">Light Booth</h2>
-      <p>
-        The light booth overlooks the Rastelli Room on the Aerial Corridor side. The booth is available for rental and has the following specs:
+      <h2 class="display">Amenities</h2>
+      <p class="section__intro">
+        Community spaces and technical areas available to renters, teachers, and members.
       </p>
-      <ul>
-        <li>ETC 48/96 light board with 48 dimming channels rated for 2K of lighting each</li>
-        <li>12 cyc lights in 4 sets of 3 colors, 1000 watts</li>
-        <li>8 par 64 lights as high sides, 1000 watt</li>
-        <li>24 fresnels as overhead wash, 750 watt</li>
-        <li>18 lekos as front of house wash, 1000 watt</li>
-      </ul>
-      <div class="feature-media feature-media--inline">
-        <img src="/images/facilities-light-booth.webp" alt="The ETC 48/96 lighting console in the Boulder Circus Center light booth" width="1200" height="749" loading="lazy" />
-      </div>
+      <div class="amenities">
+        <article class="amenity" id="light-booth">
+          <div class="amenity__media">
+            <img src="/images/facilities-light-booth.webp" alt="The ETC 48/96 lighting console in the Boulder Circus Center light booth" width="1200" height="749" loading="lazy" />
+          </div>
+          <h3>Light Booth</h3>
+          <p>Overlooks the Rastelli Room on the Aerial Corridor side. Available for rental.</p>
+          <ul>
+            <li>ETC 48/96 light board, 48 dimming channels rated for 2K each</li>
+            <li>12 cyc lights in 4 sets of 3 colors, 1000 watts</li>
+            <li>8 par 64 lights as high sides, 1000 watt</li>
+            <li>24 fresnels as overhead wash, 750 watt</li>
+            <li>18 lekos as front of house wash, 1000 watt</li>
+          </ul>
+        </article>
 
-      <h2 class="display">Green Room</h2>
-      <p>
-        The Green Room is a community space located upstairs and has the following amenities:
-      </p>
-      <ul>
-        <li>Coffee and Espresso Machines</li>
-        <li>Small Refrigerator</li>
-        <li>Ample Seating</li>
-        <li>Desk & Table Space</li>
-        <li>Free Wifi</li>
-      </ul>
-      <div class="feature-media feature-media--inline">
-        <img src="/images/facilities-green-room.webp" alt="The Green Room community space" width="800" height="498" loading="lazy" />
-      </div>
+        <article class="amenity" id="green-room">
+          <div class="amenity__media">
+            <img src="/images/facilities-green-room.webp" alt="The Green Room community space with couches, a piano, and a coffee station" width="800" height="498" loading="lazy" />
+          </div>
+          <h3>Green Room</h3>
+          <p>A community space upstairs for between classes and rehearsals.</p>
+          <ul>
+            <li>Coffee and espresso machines</li>
+            <li>Small refrigerator</li>
+            <li>Ample seating</li>
+            <li>Desk and table space</li>
+            <li>Free wifi</li>
+          </ul>
+        </article>
 
-      <h2 class="display">The Garage</h2>
-      <p>
-        The garage is a multi-purpose storage area at the BCC.
-      </p>
-      <ul>
-        <li>20 foot ceilings</li>
-        <li>Floor to ceiling garage door</li>
-        <li>Lots of shelving space</li>
-        <li>Send us a message if you are interested in storing gear in the garage</li>
-      </ul>
-      <div class="feature-media feature-media--inline">
-        <img src="/images/facilities-garage.webp" alt="The Garage storage area" width="800" height="600" loading="lazy" />
-      </div>
+        <article class="amenity" id="garage">
+          <div class="amenity__media">
+            <img src="/images/facilities-garage.webp" alt="The Garage storage area with floor-to-ceiling shelving, unicycles, and German wheels" width="800" height="600" loading="lazy" />
+          </div>
+          <h3>The Garage</h3>
+          <p>A multi-purpose storage area at the BCC.</p>
+          <ul>
+            <li>20 foot ceilings</li>
+            <li>Floor to ceiling garage door</li>
+            <li>Lots of shelving space</li>
+            <li>Message us if you want to store gear here</li>
+          </ul>
+        </article>
 
-      <h2 class="display">The Grounds</h2>
-      <p>
-        The Boulder Circus Center is located on a beautiful 5 acre parcel with a great western view of the foothills and beyond.
-      </p>
-      <ul>
-        <li>Community Garden</li>
-        <li>Yoga Deck</li>
-        <li>Picnic Tables</li>
-        <li>Large Parking Lot</li>
-      </ul>
-      <div class="feature-media feature-media--inline">
-        <img src="/images/facilities-grounds.webp" alt="The Boulder Circus Center grounds and foothills view" width="800" height="448" loading="lazy" />
+        <article class="amenity" id="grounds">
+          <div class="amenity__media">
+            <img src="/images/facilities-grounds.webp" alt="The patio and deck at the Boulder Circus Center with picnic tables" width="800" height="448" loading="lazy" />
+          </div>
+          <h3>The Grounds</h3>
+          <p>A five-acre parcel with a great western view of the foothills and beyond.</p>
+          <ul>
+            <li>Community garden</li>
+            <li>Yoga deck</li>
+            <li>Picnic tables</li>
+            <li>Large parking lot</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
@@ -302,6 +308,57 @@ const localBusiness = {
 
   .feature-media--inline {
     margin-block: var(--space-lg);
+  }
+
+  .amenities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: var(--space-lg);
+    margin-block-start: var(--space-xl);
+  }
+
+  .amenity {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-paper);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .amenity__media {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+
+  .amenity__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .amenity h3 {
+    font-size: var(--font-size-sm);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: var(--space-md) var(--space-md) var(--space-sm);
+  }
+
+  .amenity p,
+  .amenity ul {
+    margin-inline: var(--space-md);
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+  }
+
+  .amenity p {
+    color: var(--color-text-muted);
+    margin-block: 0 var(--space-sm);
+  }
+
+  .amenity ul {
+    margin-block: 0 var(--space-md);
+    padding-inline-start: 1.1em;
   }
 
   .calendar-embed {
