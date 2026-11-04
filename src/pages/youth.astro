@@ -8,23 +8,27 @@ import Base from '../layouts/Base.astro';
 >
   <section class="section">
     <div class="container">
-      <h1>Welcome to our Youth Program</h1>
+      <div class="grid grid--2 intro">
+        <div>
+          <h1>Welcome to our Youth Program</h1>
 
-      <p class="actions">
-        <a class="btn" href="https://portal.iclasspro.com/bouldercircuscenter" target="_blank" rel="noopener">REGISTER FOR CAMPS & CLASSES HERE</a>
-      </p>
+          <p class="actions">
+            <a class="btn" href="https://portal.iclasspro.com/bouldercircuscenter" target="_blank" rel="noopener">REGISTER FOR CAMPS & CLASSES HERE</a>
+          </p>
 
-      <hr />
+          <hr />
 
-      <p>
-        At the Boulder Circus Center, we are passionate about bringing the magic of circus arts to children of all ages. Whether they’re taking their first steps into the world of circus or perfecting their skills, we provide a fun, safe, and supportive environment where kids can grow, learn, and have a blast!
-      </p>
-      <p>
-        We offer class sessions and <a href="https://portal.iclasspro.com/bouldercircuscenter/camps/4?sortBy=time" target="_blank" rel="noopener">circus/aerial camps</a>!
-      </p>
+          <p>
+            At the Boulder Circus Center, we are passionate about bringing the magic of circus arts to children of all ages. Whether they’re taking their first steps into the world of circus or perfecting their skills, we provide a fun, safe, and supportive environment where kids can grow, learn, and have a blast!
+          </p>
+          <p>
+            We offer class sessions and <a href="https://portal.iclasspro.com/bouldercircuscenter/camps/4?sortBy=time" target="_blank" rel="noopener">circus/aerial camps</a>!
+          </p>
+        </div>
 
-      <div class="photo">
-        <img src="/images/youth-german-wheel.webp" alt="Youth students posing with German wheels in the Rastelli Room" width="1600" height="1067" loading="lazy" />
+        <div class="photo">
+          <img src="/images/youth-german-wheel.webp" alt="Youth students posing with German wheels in the Rastelli Room" width="1600" height="1067" loading="lazy" />
+        </div>
       </div>
 
       <h2>Why Choose Us?</h2>
@@ -89,8 +93,17 @@ import Base from '../layouts/Base.astro';
     margin-block: var(--space-lg);
   }
 
+  .intro {
+    align-items: center;
+  }
+
+  @media (max-width: 60rem) {
+    .intro {
+      grid-template-columns: 1fr;
+    }
+  }
+
   .photo {
-    margin-block: var(--space-xl);
     border-radius: var(--radius);
     overflow: hidden;
   }
