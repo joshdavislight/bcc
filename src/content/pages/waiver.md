@@ -8,13 +8,13 @@ updated: "2026-10-26"
 
 ## Sign a waiver
 
-A signed waiver is required before participating in any activity at the Boulder Circus Center — classes, open gym, workshops, or rentals.
+A signed waiver is required before participating in any activity at the Boulder Circus Center: classes, open gym, workshops, or rentals.
 
-We are in the process of moving to a new waiver system. Until the transition is complete, follow the link below that matches your activity:
+We're moving to a new waiver system. Until it's live, use the link that matches your activity:
 
-- **[Adult classes and open gym](https://app.fitdegree.com/t/dashboard?co=305&f=325)** — sign via FitDegree
-- **[Youth classes and camps](https://portal.iclasspro.com/bouldercircuscenter)** — sign via iClassPro
-- **Renters and workshops** — contact the host or the front desk for the event-specific waiver link
+- **Adult classes and open gym.** Sign in [FitDegree](https://app.fitdegree.com/t/dashboard?co=305&f=325).
+- **Youth classes and camps.** Sign in [iClassPro](https://portal.iclasspro.com/bouldercircuscenter).
+- **Renters and workshops.** Contact the host or the front desk for the event waiver link.
 
 ### Minors
 
