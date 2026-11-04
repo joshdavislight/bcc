@@ -8,10 +8,10 @@ import Base from '../layouts/Base.astro';
 >
   <section class="section">
     <div class="container">
+      <h1>Welcome to our Youth Program</h1>
+
       <div class="grid grid--2 intro">
         <div>
-          <h1>Welcome to our Youth Program</h1>
-
           <p class="actions">
             <a class="btn" href="https://portal.iclasspro.com/bouldercircuscenter" target="_blank" rel="noopener">REGISTER FOR CAMPS & CLASSES HERE</a>
           </p>
@@ -89,6 +89,15 @@ import Base from '../layouts/Base.astro';
 </Base>
 
 <style>
+  .container {
+    max-width: 920px;
+  }
+
+  h1 {
+    margin-block-end: var(--space-lg);
+    font-size: clamp(2rem, 5.2vw, 3.2rem);
+  }
+
   .actions {
     margin-block: var(--space-lg);
   }
