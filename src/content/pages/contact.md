@@ -12,7 +12,7 @@ updated: "2026-10-26"
 4747 26th St  
 Boulder, CO 80301
 
-[Get directions](https://maps.google.com/?q=4747+26th+St+Boulder+CO+80301)
+<a href="https://maps.google.com/?q=4747+26th+St+Boulder+CO+80301" target="_blank" rel="noopener">Get directions</a>
 
 ### Phone
 

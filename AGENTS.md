@@ -27,6 +27,7 @@ You are editing a static website built with Astro. Before making changes, read t
 5. **Images go in `public/images/`** and should be WebP or AVIF.
 6. **Navigation is generated automatically.** To add a page to the nav, set `nav: true` and an `order` number in frontmatter.
 7. **Prefer small, readable changes.** One page per commit is fine.
+8. **External links open in a new tab.** Anything that leaves the site (social media, FitDegree, iClassPro, Skedda, maps, PDFs on another host) gets `target="_blank" rel="noopener"`. Internal links never do. `mailto:` and `tel:` stay as they are. In Markdown, write the link as an HTML anchor so it can carry the attributes.
 
 ## Copy
 

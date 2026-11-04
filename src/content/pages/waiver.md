@@ -12,8 +12,8 @@ A signed waiver is required before participating in any activity at the Boulder 
 
 We're moving to a new waiver system. Until it's live, use the link that matches your activity:
 
-- **Adult classes and open gym.** Sign in [FitDegree](https://app.fitdegree.com/t/dashboard?co=305&f=325).
-- **Youth classes and camps.** Sign in [iClassPro](https://portal.iclasspro.com/bouldercircuscenter).
+- **Adult classes and open gym.** Sign in <a href="https://app.fitdegree.com/t/dashboard?co=305&f=325" target="_blank" rel="noopener">FitDegree</a>.
+- **Youth classes and camps.** Sign in <a href="https://portal.iclasspro.com/bouldercircuscenter" target="_blank" rel="noopener">iClassPro</a>.
 - **Renters and workshops.** Contact the host or the front desk for the event waiver link.
 
 ### Minors

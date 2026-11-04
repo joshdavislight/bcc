@@ -40,6 +40,16 @@ npm run build
 
 This creates a `dist/` folder with the static site.
 
+### Link to another site
+
+External links open in a new tab. Add both attributes:
+
+```html
+<a href="https://example.com" target="_blank" rel="noopener">Example</a>
+```
+
+In Markdown, write the link as an HTML anchor so it can carry them. Internal links, `mailto:`, and `tel:` stay plain.
+
 ### Before committing
 
 ```bash
