@@ -10,7 +10,8 @@
     "build": "astro build && node scripts/postbuild.mjs",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "astro check && node scripts/validate-content.mjs",
+    "check": "astro check && node scripts/validate-content.mjs && node scripts/check-copy.mjs",
+    "check:copy": "node scripts/check-copy.mjs",
     "new:page": "node scripts/new-page.mjs"
   },
   "dependencies": {
