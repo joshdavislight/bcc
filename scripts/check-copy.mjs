@@ -21,7 +21,8 @@ const BANNED = [
   [/\bever-evolving\b/i, 'cut it'],
 ];
 
-// The youth page is being rewritten separately; drop this once it is.
+// The youth page carries verbatim WordPress copy by client instruction.
+// Formatting may change; the text may not.
 const SKIP = new Set(['src/pages/youth.astro']);
 
 function walk(dir) {

@@ -44,7 +44,7 @@ The site speaks in the BCC's voice, not a marketing deck's. Two things enforce t
 - **Keep old-site facts.** Dimensions, rig points, rates, policies, and allergy/insurance wording came from the WordPress site; clarify the grammar around them but do not change the facts.
 - **Meta descriptions and JSON-LD count as copy.** They show up in search results.
 
-`npm run check` runs `scripts/check-copy.mjs`, which fails on em dashes and the banned-word list across `src/**/*.{astro,md,json}`. Run `npm run check:copy` alone for a quick pass. `src/pages/youth.astro` is temporarily exempt while that page is rewritten; remove it from `SKIP` when it is done.
+`npm run check` runs `scripts/check-copy.mjs`, which fails on em dashes and the banned-word list across `src/**/*.{astro,md,json}`. Run `npm run check:copy` alone for a quick pass. `src/pages/youth.astro` holds verbatim WordPress copy at the client's request, so the checker skips it; do not rewrite that page's text, only formatting.
 
 
 ## Common tasks

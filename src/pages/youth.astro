@@ -1,114 +1,79 @@
 ---
 import Base from '../layouts/Base.astro';
-import offerings from '../data/offerings.json';
-
-const youthOfferings = offerings.filter((o) => o.audience === 'youth' && o.active);
-
-const itemList = {
-  '@type': 'ItemList',
-  itemListElement: youthOfferings.map((o, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    item: {
-      '@type': 'Course',
-      name: o.name,
-      description: o.description,
-      provider: { '@type': 'Organization', name: 'Boulder Circus Center' },
-      url: 'https://portal.iclasspro.com/bouldercircuscenter/classes',
-    },
-  })),
-};
 ---
 
 <Base
   title="Youth Classes"
-  description="Youth circus classes and camps at Boulder Circus Center — mixed circus, aerial arts, and teen cirque theater."
-  jsonLd={itemList}
+  description="Youth circus classes and camps at Boulder Circus Center: mixed circus, aerial arts, and teen cirque theater."
 >
   <section class="section">
     <div class="container">
       <h1>Welcome to our Youth Program</h1>
-      <p class="lead">
+
+      <p class="actions">
+        <a class="btn" href="https://portal.iclasspro.com/bouldercircuscenter" target="_blank" rel="noopener">REGISTER FOR CAMPS & CLASSES HERE</a>
+      </p>
+
+      <hr />
+
+      <p>
         At the Boulder Circus Center, we are passionate about bringing the magic of circus arts to children of all ages. Whether they’re taking their first steps into the world of circus or perfecting their skills, we provide a fun, safe, and supportive environment where kids can grow, learn, and have a blast!
       </p>
       <p>
-        <a class="btn" href="https://portal.iclasspro.com/bouldercircuscenter" target="_blank" rel="noopener">Register for camps & classes</a>
+        We offer class sessions and <a href="https://portal.iclasspro.com/bouldercircuscenter/camps/4?sortBy=time" target="_blank" rel="noopener">circus/aerial camps</a>!
       </p>
-    </div>
-  </section>
 
-  <section class="section section--cream">
-    <div class="container">
-      <h2 class="display">Why Choose Us?</h2>
-      <ul class="grid grid--3">
-        <li class="card card--plain">
-          <h3 class="display">Expert Coaches</h3>
-          <p>All of our instructors are experienced circus artists and passionate about teaching.</p>
-        </li>
-        <li class="card card--plain">
-          <h3 class="display">Fun, Safe Environment</h3>
-          <p>We prioritize safety while fostering a space for kids to have fun and explore their creativity.</p>
-        </li>
-        <li class="card card--plain">
-          <h3 class="display">Small Class Sizes</h3>
-          <p>With a low student-to-teacher ratio, your child will receive personalized attention to help them grow and succeed.</p>
-        </li>
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li><strong>Expert Coaches:</strong> All of our instructors are experienced circus artists and passionate about teaching.</li>
+        <li><strong>Fun, Safe Environment:</strong> We prioritize safety while fostering a space for kids to have fun and explore their creativity.</li>
+        <li><strong>Small Class Sizes:</strong> With a low student-to-teacher ratio, your child will receive personalized attention to help them grow and succeed.</li>
       </ul>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <h2 class="display">Class Offerings</h2>
-      <p class="section__intro">
-        Our classes are session-based, meaning each session runs for a set period and registration is open only during specific windows. Once registration for a session is closed, it will not reopen until the next session begins.
+      <p>
+        <strong><a href="https://portal.iclasspro.com/bouldercircuscenter/classes" target="_blank" rel="noopener">Class Offerings</a>:</strong> Our classes are session-based, meaning each session runs for a set period and registration is open only during specific windows. Once registration for a session is closed, it will not reopen until the next session begins.
       </p>
       <p>
         <em>We offer a range of exciting classes, tailored to different age groups and skill levels, to help every child discover the magic of circus arts!</em>
       </p>
+      <ul>
+        <li>
+          <strong><a href="https://portal.iclasspro.com/bouldercircuscenter/classes" target="_blank" rel="noopener">Mixed Circus Sessions</a> (Starting at Age 6)</strong><br />
+          Our Mixed Circus sessions provide a well-rounded introduction to circus arts, including juggling, acrobatics, clowning, german wheel and more! Each age group progresses to new challenges, growing their circus abilities while fostering teamwork, confidence, and creativity.
+        </li>
+        <li>
+          <strong><a href="https://portal.iclasspro.com/bouldercircuscenter/classes" target="_blank" rel="noopener">Aerial Arts Classes</a> (Starting at Age 8)</strong><br />
+          Designed for students ready to take their circus journey to the air! We offer classes from the introductory to the advanced level. These classes focus on building strength, flexibility, and confidence while mastering aerial skills in a fun and supportive environment.
+        </li>
+        <li>
+          <strong><a href="https://portal.iclasspro.com/bouldercircuscenter/classes" target="_blank" rel="noopener">Teen Cirque Theater Lab</a> (Ages 10-17)</strong><br />
+          A Creative Circus-Theater Program for Youth + Teens on Wednesdays, 4:00 PM – 5:45 PM (running 2x a year). It’s a collaborative, after-school creative lab where students will build original circus-theater acts, play improv & theater games, and share their work in an in-class variety showcase!
+        </li>
+      </ul>
 
-      <div class="grid grid--2">
-        {youthOfferings.map((o) => (
-          <article class="card" id={o.id}>
-            <h2>{o.name}</h2>
-            <p class="meta">{o.ages}</p>
-            <p>{o.description}</p>
-            <p><strong>Schedule:</strong> {o.schedule}</p>
-            <p><strong>Price:</strong> {o.price}</p>
-            <a class="btn" href={o.portalUrl} target="_blank" rel="noopener">Register via iClassPro</a>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--cream">
-    <div class="container">
-      <h2 class="display">Be the first to know!</h2>
+      <h3>Be the first to know!</h3>
       <p>
-        Make an account and opt-in for email blasts to be the first to know when registrations go live via our <a href="https://portal.iclasspro.com/bouldercircuscenter/dashboard" target="_blank" rel="noopener">iClass customer portal</a>.
+        Make an account and opt-in for email blasts to be the first to know when registrations go live via our <a href="https://portal.iclasspro.com/bouldercircuscenter/dashboard" target="_blank" rel="noopener">iclass customer portal</a>.
       </p>
       <p>
         If you have any questions regarding home-rigging and safe practices, please refer to the <a href="https://bouldercircuscenter.net/wp-content/uploads/2025/02/Home-Rigging-Dangers-_-Safe-Practices-Guide.pdf" target="_blank" rel="noopener">Safety Manual</a>.
       </p>
 
-      <h3 class="display">Download the iClass Youth Portal App</h3>
-      <p>
-        Stay connected with class schedules, announcements, and updates on your phone! Search organization name: “bouldercircuscenter” after downloading the app.
-      </p>
+      <h3>📲 Download the iClass Youth Portal App!</h3>
+      <p>Stay connected with class schedules, announcements, and updates on your phone!</p>
+      <p>Search organization name: “bouldercircuscenter” after downloading the app.</p>
+      <p>Download the iClass app today:</p>
       <ul>
-        <li><a href="https://apps.apple.com/us/app/the-iclasspro-app/id1331001591" target="_blank" rel="noopener">Apple App Store</a></li>
-        <li><a href="https://play.google.com/store/apps/details?id=com.iclasspro.customerportal" target="_blank" rel="noopener">Google Play Store</a></li>
+        <li><strong>Apple App Store:</strong> <a href="https://apps.apple.com/us/app/the-iclasspro-app/id1331001591" target="_blank" rel="noopener">Download Here</a></li>
+        <li><strong>Google Play Store:</strong> <a href="https://play.google.com/store/apps/details?id=com.iclasspro.customerportal" target="_blank" rel="noopener">Download Here</a></li>
       </ul>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <p class="note">
+      <hr />
+
+      <p>
         Please email our Youth Director, Cressie Mae, with any questions: <a href="mailto:youth@bouldercircuscenter.net">youth@bouldercircuscenter.net</a>
       </p>
-      <p>
+      <p class="actions">
         <a class="btn" href="https://portal.iclasspro.com/bouldercircuscenter" target="_blank" rel="noopener">Log in to Youth Portal</a>
       </p>
     </div>
@@ -116,27 +81,30 @@ const itemList = {
 </Base>
 
 <style>
-  .meta {
-    color: var(--color-accent);
-    font-weight: 700;
-    margin-block-end: var(--space-sm);
+  .actions {
+    margin-block: var(--space-lg);
   }
 
-  .note {
-    margin-block-end: var(--space-lg);
+  hr {
+    margin-block: var(--space-xl);
+    border: 0;
+    border-top: 1px solid var(--color-border);
   }
 
-  .section__intro {
-    max-width: var(--measure);
+  ul {
+    margin-block: var(--space-sm) var(--space-md);
+    padding-inline-start: 1.1em;
   }
 
-  .card--plain {
-    padding: var(--space-xl);
-    background-color: var(--color-paper);
+  li + li {
+    margin-block-start: var(--space-sm);
   }
 
-  .card--plain h3 {
-    font-size: var(--font-size-md);
-    margin-block-start: 0;
+  h2 {
+    margin-block-start: var(--space-xl);
+  }
+
+  h3 {
+    margin-block-start: var(--space-xl);
   }
 </style>
