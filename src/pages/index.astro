@@ -108,30 +108,15 @@ const facilityRooms = rooms.filter((r) =>
 
   <section class="section" aria-labelledby="coming-up-heading">
     <div class="container">
-      <span class="label">Coming up</span>
-      <h2 id="coming-up-heading" class="display section__title">Jams, open gyms & classes</h2>
-      <ul class="grid grid--3 events">
-        <li class="event">
-          <p class="event__time">Sundays · 6:00–10:00 PM</p>
-          <h3 class="display event__title">Juggling Club</h3>
-          <p>Open juggling practice and skill sharing. All props and skill levels welcome.</p>
-          <a class="btn btn--secondary" href="https://app.fitdegree.com/t/dashboard?co=305&f=325">Drop in</a>
-        </li>
-        <li class="event">
-          <p class="event__time">Check schedule</p>
-          <h3 class="display event__title">Open Gym</h3>
-          <p>Supervised open training time for aerialists, acrobats, and circus artists looking for space to practice.</p>
-          <a class="btn btn--secondary" href="https://app.fitdegree.com/t/dashboard?co=305&f=325">View times</a>
-        </li>
-        <li class="event">
-          <p class="event__time">Tuesdays · 7:30 PM</p>
-          <h3 class="display event__title">Aerial Silks</h3>
-          <p>Beginner/Intermediate aerial silks with Coach Kira. Drop in or register for the session.</p>
-          <a class="btn btn--secondary" href="https://app.fitdegree.com/t/dashboard?co=305&f=325">Register</a>
-        </li>
-      </ul>
+      <span class="label">Today</span>
+      <h2 id="coming-up-heading" class="display section__title">What’s on today</h2>
+      <div id="fd-live-schedule-today-widget" data-fitspot-id="325"></div>
+      <p class="today-note">
+        Looking further ahead? <a href="/adult/">See the full class schedule</a>.
+      </p>
     </div>
   </section>
+  <script is:inline src="https://support.fitdegree.com/widget/fd-widget.min.js"></script>
 
   <section class="section section--cream">
     <div class="container text-center">
@@ -339,36 +324,14 @@ const facilityRooms = rooms.filter((r) =>
     object-fit: cover;
   }
 
-  .events {
-    list-style: none;
+  #fd-live-schedule-today-widget {
+    margin-block-start: var(--space-lg);
+    min-height: 12rem;
   }
 
-  .event {
-    padding: var(--space-lg);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    background-color: var(--color-paper);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .event__time {
-    margin-block-end: var(--space-sm);
-    font-size: var(--font-size-xs);
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-accent);
-  }
-
-  .event__title {
-    font-size: var(--font-size-md);
-    line-height: 1.2;
-    margin-block-end: var(--space-sm);
-  }
-
-  .event p {
-    flex: 1 1 auto;
+  .today-note {
+    margin-block-start: var(--space-md);
     color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
   }
 </style>
