@@ -33,6 +33,7 @@ const facilityRooms = rooms.filter((r) =>
     <div class="hero__bg" aria-hidden="true"></div>
     <div class="hero__spotlight" aria-hidden="true"></div>
     <div class="hero__content container">
+      <img class="hero__logo" src="/images/logo-emblem.webp" alt="" width="600" height="458" />
       <h1 class="hero__title display">A place for circus</h1>
       <p class="hero__lead">
         10,000 square feet of training space for aerial, acrobatics, juggling, and circus theater.
@@ -220,6 +221,13 @@ const facilityRooms = rooms.filter((r) =>
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.75);
+  }
+
+  .hero__logo {
+    width: clamp(150px, 20vw, 240px);
+    height: auto;
+    margin: 0 auto var(--space-lg);
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
   }
 
   .hero__title {
