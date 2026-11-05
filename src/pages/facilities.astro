@@ -43,6 +43,7 @@ const localBusiness = {
   <section class="section section--purple" id="rastelli">
     <div class="container">
       <h2 class="display">The Rastelli Room</h2>
+      <p class="rate">{rate('rastelli-full')}</p>
       <p>
         The Rastelli room is the largest studio at the BCC. The floor is sprung oak with Harlequin specs, and the lights point upward. Natural light and fresh air are plentiful. The room can be divided into two areas that rent separately.
       </p>
@@ -51,7 +52,7 @@ const localBusiness = {
       </div>
       <div class="grid grid--2">
         <div class="feature-block">
-          <h3>The Theatre Area</h3>
+          <h3>The Theatre Side</h3>
           <p class="rate">{rate('rastelli-theatre')}</p>
           <p>Designed to be a theatre rehearsal space.</p>
           <ul>
@@ -71,9 +72,6 @@ const localBusiness = {
           </ul>
         </div>
       </div>
-      <p class="feature-footnote">
-        The full room rents for {rate('rastelli-full')}.
-      </p>
     </div>
   </section>
 
@@ -276,11 +274,8 @@ const localBusiness = {
     color: var(--bcc-white);
   }
 
-  .feature-footnote {
-    margin-block-start: var(--space-lg);
-    margin-block-end: 0;
-    font-size: var(--font-size-sm);
-    color: rgba(255, 255, 255, 0.9);
+  .section--purple .rate {
+    color: var(--bcc-white);
   }
 
   .feature-block {
