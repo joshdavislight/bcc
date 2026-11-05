@@ -4,32 +4,285 @@ import Base from '../layouts/Base.astro';
 
 <Base
   title="Page not found"
-  description="We couldn't find that page. Try one of these links or get in touch."
+  description="This page has left the ring. Find your way back to the Boulder Circus Center."
   noindex={true}
 >
-  <section class="section">
+  <section class="notfound" aria-labelledby="notfound-title">
     <div class="container">
-      <h1 class="display">Page not found</h1>
-      <p class="lead">
-        We couldn't find that page. It may have moved or been removed.
-      </p>
-      <ul class="grid grid--3">
-        <li class="card card--plain">
-          <a class="display" href="/">Home</a>
-        </li>
-        <li class="card card--plain">
-          <a class="display" href="/youth/">Youth</a>
-        </li>
-        <li class="card card--plain">
-          <a class="display" href="/adult/">Adult</a>
-        </li>
-        <li class="card card--plain">
-          <a class="display" href="/facilities/">Facilities</a>
-        </li>
-        <li class="card card--plain">
-          <a class="display" href="/contact/">Contact</a>
-        </li>
-      </ul>
+      <article class="playbill">
+        <div class="bunting" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="playbill__inner">
+          <p class="playbill__eyebrow">Boulder Circus Center</p>
+          <p class="playbill__number"><span class="playbill__digits">404</span></p>
+          <p class="playbill__status">Page not found</p>
+          <h1 class="playbill__title" id="notfound-title">This act has left the ring.</h1>
+          <p class="playbill__copy">The page you're looking for has packed up its trunk and moved on.</p>
+          <div class="playbill__actions">
+            <a class="ticket" href="/">Back to center stage</a>
+            <span class="playbill__hint">or choose your next act below</span>
+          </div>
+          <div class="playbill__program">
+            <h2 class="playbill__program-title">Tonight's programme</h2>
+            <ul class="playbill__links">
+              <li><a href="/">Home<span class="playbill__arrow" aria-hidden="true">→</span></a></li>
+              <li><a href="/youth/">Youth<span class="playbill__arrow" aria-hidden="true">→</span></a></li>
+              <li><a href="/adult/">Adult<span class="playbill__arrow" aria-hidden="true">→</span></a></li>
+              <li><a href="/facilities/">Facilities<span class="playbill__arrow" aria-hidden="true">→</span></a></li>
+              <li><a href="/waiver/">Waiver<span class="playbill__arrow" aria-hidden="true">→</span></a></li>
+              <li><a href="/contact/">Contact<span class="playbill__arrow" aria-hidden="true">→</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 </Base>
+
+<style>
+  .notfound {
+    padding-block: var(--space-2xl) var(--space-3xl);
+    background-color: var(--color-cream);
+  }
+
+  .playbill {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bcc-purple);
+    color: var(--bcc-white);
+    border-radius: var(--radius);
+    padding: clamp(1.5rem, 5vw, 3.5rem);
+    box-shadow: var(--shadow);
+  }
+
+  .playbill::before {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: var(--radius);
+    pointer-events: none;
+  }
+
+  .playbill__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .bunting {
+    display: flex;
+    justify-content: space-between;
+    gap: 3px;
+    margin-block-end: var(--space-lg);
+  }
+
+  .bunting span {
+    display: block;
+    width: 100%;
+    height: 0.9rem;
+    background-color: var(--bcc-cream);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+
+  .bunting span:nth-child(2n) {
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+
+  .playbill__eyebrow {
+    max-width: none;
+    margin-block-end: var(--space-lg);
+    text-align: center;
+    font-size: var(--font-size-xs);
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bcc-cream);
+  }
+
+  .playbill__number {
+    max-width: none;
+    margin-block-end: var(--space-md);
+    text-align: center;
+  }
+
+  .playbill__digits {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: clamp(6rem, 24vw, 12rem);
+    line-height: 0.82;
+    letter-spacing: 0.02em;
+    color: var(--bcc-cream);
+    text-shadow: 8px 8px 0 var(--bcc-purple-light);
+  }
+
+  .playbill__status {
+    max-width: none;
+    margin-block-end: var(--space-md);
+    text-align: center;
+    font-size: var(--font-size-xs);
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .playbill__title {
+    max-width: 20ch;
+    margin: 0 auto var(--space-md);
+    text-align: center;
+    font-size: clamp(1.6rem, 1.2rem + 2.2vw, 2.75rem);
+    line-height: 1.1;
+    text-wrap: balance;
+    color: var(--bcc-cream);
+  }
+
+  .playbill__copy {
+    max-width: 52ch;
+    margin: 0 auto var(--space-xl);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .playbill__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-block-end: var(--space-2xl);
+  }
+
+  .ticket {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.9rem 1.75rem;
+    border: 2px dashed var(--bcc-purple);
+    border-radius: var(--radius);
+    background-color: var(--bcc-cream);
+    color: var(--bcc-purple);
+    font-size: var(--font-size-sm);
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+  }
+
+  .ticket::before,
+  .ticket::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--bcc-purple);
+    transform: translateY(-50%);
+  }
+
+  .ticket::before {
+    left: -9px;
+  }
+
+  .ticket::after {
+    right: -9px;
+  }
+
+  .ticket:hover,
+  .ticket:focus {
+    background-color: var(--bcc-white);
+    color: var(--bcc-purple-dark);
+    transform: translateY(-2px);
+  }
+
+  .ticket:focus-visible {
+    outline-color: var(--bcc-cream);
+    outline-offset: 4px;
+  }
+
+  .playbill__hint {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .playbill__program {
+    max-width: 56rem;
+    margin-inline: auto;
+    padding-block-start: var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .playbill__program-title {
+    margin: 0 0 var(--space-md);
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-xs);
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--bcc-cream);
+  }
+
+  .playbill__links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 var(--space-xl);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .playbill__links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    min-height: 44px;
+    padding-block: var(--space-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    color: var(--bcc-cream);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+
+  .playbill__links a:hover,
+  .playbill__links a:focus {
+    color: var(--bcc-cream);
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+
+  .playbill__links a:hover .playbill__arrow,
+  .playbill__links a:focus .playbill__arrow {
+    transform: translateX(4px);
+  }
+
+  .playbill__arrow {
+    transition: transform 0.2s;
+  }
+
+  .playbill a:focus-visible {
+    outline-color: var(--bcc-cream);
+  }
+
+  @media (width < 36rem) {
+    .playbill__links {
+      grid-template-columns: 1fr;
+    }
+
+    .playbill__actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .ticket {
+      width: 100%;
+    }
+  }
+</style>
